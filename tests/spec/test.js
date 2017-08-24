@@ -89,8 +89,8 @@ describe('difference', function () {
   });
 
   it('should work with large arrays', function () {
-    var array1 = Array.apply(null, { length: LARGE_ARRAY_SIZE + 1 }).map(Number.call, Number);
-    var array2 = Array.apply(null, { length: LARGE_ARRAY_SIZE }).map(Number.call, Number);
+    var array1 = new Array(LARGE_ARRAY_SIZE + 1).fill().map(Number.call, Number);
+    var array2 = new Array(LARGE_ARRAY_SIZE).fill().map(Number.call, Number);
     var a = {};
     var b = {};
     var c = {};
