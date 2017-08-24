@@ -33,7 +33,7 @@ var $difference = function difference(array) {
  *
  * @param {array} array - The array to inspect.
  * @throws {TypeError} If array is null or undefined.
- * @param {array} [...exclude] - The values to exclude.
+ * @param {...array} [exclude] - The values to exclude.
  * @returns {array} Returns the new array of filtered values.
  * @example
  * var difference = require('array-difference-x');
