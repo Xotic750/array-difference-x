@@ -1,6 +1,6 @@
 /**
  * @file Creates an array of array values not included in the other given arrays.
- * @version 1.0.0
+ * @version 1.1.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -9,7 +9,6 @@
 
 'use strict';
 
-var toObject = require('to-object-x');
 var filter = require('array-filter-x');
 var some = require('array-some-x');
 var slice = require('array-slice-x');
@@ -17,9 +16,12 @@ var arrayincludes = require('array-includes-x');
 var isNil = require('is-nil-x');
 
 var $difference = function difference(array) {
-  var object = toObject(array);
+  if (isNil(array)) {
+    return [];
+  }
+
   var excludes = slice(arguments, 1);
-  return filter(object, function (value) {
+  return filter(array, function (value) {
     return some(excludes, function (exclude) {
       return isNil(exclude) === false && arrayincludes(exclude, value);
     }) === false;

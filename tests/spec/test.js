@@ -28,20 +28,6 @@ describe('difference', function () {
     expect(typeof difference).toBe('function');
   });
 
-  it('should throw when target not undefined', function () {
-    expect(function () {
-      difference();
-    }).toThrow();
-
-    expect(function () {
-      difference(void 0);
-    }).toThrow();
-
-    expect(function () {
-      difference(null);
-    }).toThrow();
-  });
-
   it('should return the difference of the given arrays', function () {
     var actual = difference([
       1,
@@ -138,5 +124,6 @@ describe('difference', function () {
     ]);
 
     expect(difference(array, null, args)).toEqual([0, null]);
+    expect(difference(null, array, 1)).toEqual([]);
   });
 });
