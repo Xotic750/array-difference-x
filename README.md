@@ -23,18 +23,18 @@
 ## array-difference-x
 Creates an array of array values not included in the other given arrays.
 
-**Version**: 1.1.0  
+**Version**: 2.0.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_array-difference-x--module.exports"></a>
 
-### `module.exports` ⇒ <code>array</code> ⏏
+### `module.exports(array, [...exclude])` ⇒ <code>array</code> ⏏
 This method creates an array of array values not included in the other given
 arrays using SameValueZero for equality comparisons. The order and references
 of result values are determined by the first array.
 
-**Kind**: Exported member  
+**Kind**: Exported function  
 **Returns**: <code>array</code> - Returns the new array of filtered values.  
 **Throws**:
 

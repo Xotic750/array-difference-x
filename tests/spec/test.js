@@ -21,9 +21,13 @@ if (typeof module === 'object' && module.exports) {
   difference = returnExports;
 }
 
-var LARGE_ARRAY_SIZE = 200;
-
 describe('difference', function () {
+  var LARGE_ARRAY_SIZE;
+
+  beforeEach(function () {
+    LARGE_ARRAY_SIZE = 200;
+  });
+
   it('is a function', function () {
     expect(typeof difference).toBe('function');
   });
