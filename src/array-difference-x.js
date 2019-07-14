@@ -7,23 +7,21 @@
  * @module array-difference-x
  */
 
-'use strict';
-
-var filter = require('array-filter-x');
-var some = require('array-some-x');
-var slice = require('array-like-slice-x');
-var arrayincludes = require('array-includes-x');
-var isNil = require('is-nil-x');
+const filter = require('array-filter-x');
+const some = require('array-some-x');
+const slice = require('array-like-slice-x');
+const arrayincludes = require('array-includes-x');
+const isNil = require('is-nil-x');
 
 /**
  * This method creates an array of array values not included in the other given
  * arrays using SameValueZero for equality comparisons. The order and references
  * of result values are determined by the first array.
  *
- * @param {array} array - The array to inspect.
+ * @param {Array} array - The array to inspect.
  * @throws {TypeError} If array is null or undefined.
- * @param {...array} [exclude] - The values to exclude.
- * @returns {array} Returns the new array of filtered values.
+ * @param {...Array} [exclude] - The values to exclude.
+ * @returns {Array} Returns the new array of filtered values.
  * @example
  * var difference = require('array-difference-x');
  *
@@ -34,10 +32,13 @@ module.exports = function difference(array) {
     return [];
   }
 
-  var excludes = slice(arguments, 1);
-  return filter(array, function (value) {
-    return some(excludes, function (exclude) {
-      return isNil(exclude) === false && arrayincludes(exclude, value);
-    }) === false;
+  const excludes = slice(arguments, 1);
+
+  return filter(array, function(value) {
+    return (
+      some(excludes, function(exclude) {
+        return isNil(exclude) === false && arrayincludes(exclude, value);
+      }) === false
+    );
   });
 };
