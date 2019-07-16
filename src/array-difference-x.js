@@ -7,11 +7,12 @@
  * @module array-difference-x
  */
 
-const filter = require('array-filter-x');
-const some = require('array-some-x');
-const slice = require('array-like-slice-x');
-const arrayincludes = require('array-includes-x');
-const isNil = require('is-nil-x');
+import filter from 'array-filter-x';
+
+import some from 'array-some-x';
+import slice from 'array-like-slice-x';
+import arrayincludes from 'array-includes-x';
+import isNil from 'is-nil-x';
 
 /**
  * This method creates an array of array values not included in the other given
@@ -27,7 +28,7 @@ const isNil = require('is-nil-x');
  *
  * difference([2, 1], [2, 3]); // => [1]
  */
-module.exports = function difference(array) {
+export default function difference(array) {
   if (isNil(array)) {
     return [];
   }
@@ -41,4 +42,4 @@ module.exports = function difference(array) {
       }) === false
     );
   });
-};
+}
