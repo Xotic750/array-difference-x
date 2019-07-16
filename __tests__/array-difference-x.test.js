@@ -1,4 +1,4 @@
-let difference;
+import difference from '../src/array-difference-x';
 
 describe('difference', function() {
   let LARGE_ARRAY_SIZE;
@@ -13,7 +13,7 @@ describe('difference', function() {
   });
 
   it('should return the difference of the given arrays', function() {
-    expect.assertions(1);
+    expect.assertions(2);
     let actual = difference([1, 2, 3, 4, 5], [5, 2, 10]);
 
     expect(actual).toStrictEqual([1, 3, 4]);
@@ -58,7 +58,7 @@ describe('difference', function() {
   });
 
   it('should ignore values that are not arrays or `arguments` objects', function() {
-    expect.assertions(1);
+    expect.assertions(4);
     const args = (function() {
       return arguments;
     })(1, 2, 3);

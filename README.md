@@ -21,15 +21,13 @@
 <a name="module_array-difference-x"></a>
 
 ## array-difference-x
+
 Creates an array of array values not included in the other given arrays.
 
-**Version**: 2.0.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_array-difference-x--module.exports"></a>
 
 ### `module.exports(array, [...exclude])` ⇒ <code>array</code> ⏏
+
 This method creates an array of array values not included in the other given
 arrays using SameValueZero for equality comparisons. The order and references
 of result values are determined by the first array.
@@ -40,15 +38,15 @@ of result values are determined by the first array.
 
 - <code>TypeError</code> If array is null or undefined.
 
-
-| Param | Type | Description |
-| --- | --- | --- |
-| array | <code>array</code> | The array to inspect. |
+| Param        | Type               | Description            |
+| ------------ | ------------------ | ---------------------- |
+| array        | <code>array</code> | The array to inspect.  |
 | [...exclude] | <code>array</code> | The values to exclude. |
 
-**Example**  
-```js
-var difference = require('array-difference-x');
+**Example**
 
-difference([2, 1], [2, 3]); // => [1]
+```js
+import difference from 'array-difference-x';
+
+console.log(difference([2, 1], [2, 3])); // => [1]
 ```

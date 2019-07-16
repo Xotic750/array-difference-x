@@ -1,11 +1,12 @@
+function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
+
 import filter from 'array-filter-x';
 import some from 'array-some-x';
 import slice from 'array-like-slice-x';
 import arrayincludes from 'array-includes-x';
-import isNil from 'is-nil-x';
-
-// eslint-disable jsdoc/check-param-names
+import isNil from 'is-nil-x'; // eslint-disable jsdoc/check-param-names
 // noinspection JSCommentMatchesSignature
+
 /**
  * This method creates an array of array values not included in the other given
  * arrays using SameValueZero for equality comparisons. The order and references
@@ -17,19 +18,28 @@ import isNil from 'is-nil-x';
  * @returns {Array} Returns the new array of filtered values.
  */
 // eslint-enable jsdoc/check-param-names
+
 export default function difference(array) {
+  var _this = this;
+
   if (isNil(array)) {
     return [];
   }
-
   /* eslint-disable-next-line prefer-rest-params */
-  const excludes = slice(arguments, 1);
 
-  return filter(array, (value) => {
-    return (
-      some(excludes, (exclude) => {
-        return isNil(exclude) === false && arrayincludes(exclude, value);
-      }) === false
-    );
-  });
+
+  var excludes = slice(arguments, 1);
+  return filter(array, function (value) {
+    var _this2 = this;
+
+    _newArrowCheck(this, _this);
+
+    return some(excludes, function (exclude) {
+      _newArrowCheck(this, _this2);
+
+      return isNil(exclude) === false && arrayincludes(exclude, value);
+    }.bind(this)) === false;
+  }.bind(this));
 }
+
+//# sourceMappingURL=array-difference-x.esm.js.map
