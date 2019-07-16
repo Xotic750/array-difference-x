@@ -1,12 +1,3 @@
-/**
- * @file Creates an array of array values not included in the other given arrays.
- * @version 2.0.0
- * @author Xotic750 <Xotic750@gmail.com>
- * @copyright  Xotic750
- * @license {@link <https://opensource.org/licenses/MIT> MIT}
- * @module array-difference-x
- */
-
 import filter from 'array-filter-x';
 
 import some from 'array-some-x';
@@ -23,10 +14,6 @@ import isNil from 'is-nil-x';
  * @throws {TypeError} If array is null or undefined.
  * @param {...Array} [exclude] - The values to exclude.
  * @returns {Array} Returns the new array of filtered values.
- * @example
- * var difference = require('array-difference-x');
- *
- * difference([2, 1], [2, 3]); // => [1]
  */
 export default function difference(array) {
   if (isNil(array)) {
