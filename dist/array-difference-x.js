@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-16T23:22:19.586Z",
+  "date": "2019-07-17T11:42:25.844Z",
   "describe": "",
   "description": "Creates an array of array values not included in the other given arrays.",
   "file": "array-difference-x.js",
-  "hash": "daec6d163dcc077d6b6d",
+  "hash": "3aeac191e1c4ac7458cf",
   "license": "MIT",
   "version": "3.0.0"
 }
@@ -13032,7 +13032,6 @@ var inc = $includes;
 
 
 // CONCATENATED MODULE: ./dist/array-difference-x.esm.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return difference; });
 function array_difference_x_esm_newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
 
 
@@ -13054,7 +13053,7 @@ function array_difference_x_esm_newArrowCheck(innerThis, boundThis) { if (innerT
  */
 // eslint-enable jsdoc/check-param-names
 
-function difference(array) {
+var array_difference_x_esm_difference = function difference(array) {
   var _this = this;
 
   if (isNil(array)) {
@@ -13075,7 +13074,9 @@ function difference(array) {
       return isNil(exclude) === false && array_includes_x_esm(exclude, value);
     }.bind(this)) === false;
   }.bind(this));
-}
+};
+
+/* harmony default export */ var array_difference_x_esm = __webpack_exports__["default"] = (array_difference_x_esm_difference);
 
 
 

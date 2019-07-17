@@ -17,7 +17,7 @@ import isNil from 'is-nil-x';
  * @returns {Array} Returns the new array of filtered values.
  */
 // eslint-enable jsdoc/check-param-names
-export default function difference(array) {
+const difference = function difference(array) {
   if (isNil(array)) {
     return [];
   }
@@ -32,4 +32,6 @@ export default function difference(array) {
       }) === false
     );
   });
-}
+};
+
+export default difference;

@@ -19,7 +19,7 @@ import isNil from 'is-nil-x'; // eslint-disable jsdoc/check-param-names
  */
 // eslint-enable jsdoc/check-param-names
 
-export default function difference(array) {
+var difference = function difference(array) {
   var _this = this;
 
   if (isNil(array)) {
@@ -40,6 +40,8 @@ export default function difference(array) {
       return isNil(exclude) === false && arrayincludes(exclude, value);
     }.bind(this)) === false;
   }.bind(this));
-}
+};
+
+export default difference;
 
 //# sourceMappingURL=array-difference-x.esm.js.map
