@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-25T22:38:58.741Z",
+  "date": "2019-07-26T14:50:50.633Z",
   "describe": "",
   "description": "Creates an array of array values not included in the other given arrays.",
   "file": "array-difference-x.js",
   "hash": "d88dc9565abe4d2441c7",
   "license": "MIT",
-  "version": "3.0.10"
+  "version": "3.0.11"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
