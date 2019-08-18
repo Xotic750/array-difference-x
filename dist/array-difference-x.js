@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-15T20:35:42.698Z",
+  "date": "2019-08-18T14:23:59.807Z",
   "describe": "",
   "description": "Creates an array of array values not included in the other given arrays.",
   "file": "array-difference-x.js",
-  "hash": "4c215af4360d270798d5",
+  "hash": "5a747c3b0762da2aaa01",
   "license": "MIT",
   "version": "3.1.0"
 }
@@ -2852,8 +2852,6 @@ var $includes = array_includes_x_esm_isWorking ? patchedReduce : array_includes_
 
 
 // CONCATENATED MODULE: ./dist/array-difference-x.esm.js
-function array_difference_x_esm_newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
-
 
 
 
@@ -2874,8 +2872,6 @@ function array_difference_x_esm_newArrowCheck(innerThis, boundThis) { if (innerT
 // eslint-enable jsdoc/check-param-names
 
 var array_difference_x_esm_difference = function difference(array) {
-  var _this = this;
-
   if (is_nil_x_esm(array)) {
     return [];
   }
@@ -2883,17 +2879,11 @@ var array_difference_x_esm_difference = function difference(array) {
 
 
   var excludes = array_like_slice_x_esm(arguments, 1);
-  return array_filter_x_esm(array, function (value) {
-    var _this2 = this;
-
-    array_difference_x_esm_newArrowCheck(this, _this);
-
-    return array_some_x_esm(excludes, function (exclude) {
-      array_difference_x_esm_newArrowCheck(this, _this2);
-
+  return array_filter_x_esm(array, function iterateeOuter(value) {
+    return array_some_x_esm(excludes, function iterateeInner(exclude) {
       return is_nil_x_esm(exclude) === false && array_includes_x_esm(exclude, value);
-    }.bind(this)) === false;
-  }.bind(this));
+    }) === false;
+  });
 };
 
 /* harmony default export */ var array_difference_x_esm = __webpack_exports__["default"] = (array_difference_x_esm_difference);

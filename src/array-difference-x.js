@@ -25,9 +25,9 @@ const difference = function difference(array) {
   /* eslint-disable-next-line prefer-rest-params */
   const excludes = slice(arguments, 1);
 
-  return filter(array, (value) => {
+  return filter(array, function iterateeOuter(value) {
     return (
-      some(excludes, (exclude) => {
+      some(excludes, function iterateeInner(exclude) {
         return isNil(exclude) === false && arrayincludes(exclude, value);
       }) === false
     );
