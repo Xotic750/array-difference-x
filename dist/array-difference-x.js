@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-09-05T20:13:38.872Z",
+  "date": "2020-01-31T00:10:31.171Z",
   "describe": "",
   "description": "Creates an array of array values not included in the other given arrays.",
   "file": "array-difference-x.js",
